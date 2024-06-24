@@ -1,0 +1,57 @@
+{% load static  %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Dashcode - HTML Template</title>
+  <link rel="icon" type="image/png" href=" {% static 'images/logo/favicon.svg' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/rt-plugins.css' %}">
+  <link href=" {% static 'unpkg.com/aos%402.3.0/dist/aos.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'unpkg.com/leaflet%401.9.3/dist/leaflet.css' %}" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  <script src="{% static 'js/store.js' %}"></script>
+</head>
+
+<body class=" font-inter skin-default">
+  <div class="loginwrapper">
+    <div class="lg-inner-column">
+      <div class="right-column relative">
+        <div class="inner-content h-full flex flex-col bg-white dark:bg-slate-800">
+          
+            {% block content %}{% endblock %}
+
+          <div class="auth-footer text-center">
+            Copyright 2021, Dashcode All Rights Reserved.
+          </div>
+        </div>
+      </div>
+      <div class="left-column bg-cover bg-no-repeat bg-center " style="background-image: url({% static 'images/all-img/login-bg.png' %});">
+        <div class="flex flex-col h-full justify-center">
+          <div class="flex-1 flex flex-col justify-center items-center">
+            <a href="index.html">
+              <img src="{% static 'images/logo/logo-white.svg' %}" alt="" class="mb-10">
+            </a>
+          </div>
+          <div>
+            <div class="black-500-title max-w-[525px] mx-auto pb-20 text-center">
+              Unlock your Project
+              <span class="text-white font-bold">performance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- scripts -->
+  <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+  <script src="{% static 'js/rt-plugins.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>

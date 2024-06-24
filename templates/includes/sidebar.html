@@ -1,0 +1,144 @@
+
+<div id="nav_shadow" class="nav_shadow h-[60px] absolute top-[80px] nav-shadow z-[1] w-full transition-all duration-200 pointer-events-none opacity-0"></div>
+<div class="sidebar-menus bg-white dark:bg-slate-800 py-2 px-4 h-[calc(100%-80px)] z-50" id="sidebar_menus">
+  <ul class="sidebar-menu">
+    <li>
+      <a href="{% url 'dashboard:dashboard' %}" class="navItem">
+        <span class="flex items-center">
+          <iconify-icon class=" nav-icon" icon="heroicons-outline:home"></iconify-icon>
+          <span>Dashboard</span>
+        </span>
+      </a>
+    </li>
+
+    <li class="">
+      <a href="javascript:void(0)" class="navItem">
+        <span class="flex items-center">
+      <iconify-icon class=" nav-icon" icon="heroicons-outline:document"></iconify-icon>
+      <span>Setup</span>
+        </span>
+        <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+      </a>
+      <ul class="sidebar-submenu">
+        <li>
+          <a href="{% url 'setup:levels' %}">Levels</a>
+        </li>
+        <li>
+          <a href="{% url 'setup:terms' %}">Terms</a>
+        </li>
+        <li>
+          <a href="{% url 'setup:grades' %}">Grades</a>
+        </li>
+        <li>
+          <a href="{% url 'setup:subjects' %}">Subjects</a>
+        </li>
+        <li>
+          <a href="{% url 'setup:houses' %}">Houses</a>
+        </li>
+      </ul>
+    </li>
+
+
+    <li class="">
+      <a href="javascript:void(0)" class="navItem">
+        <span class="flex items-center">
+      <iconify-icon class=" nav-icon" icon="heroicons-outline:document"></iconify-icon>
+      <span>User Management</span>
+        </span>
+        <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+      </a>
+      <ul class="sidebar-submenu">
+        <li>
+          <a href="{% url 'setup:levels' %}">Roles</a>
+        </li>
+        <li>
+          <a href="{% url 'setup:terms' %}">Permission</a>
+        </li>
+        <li>
+          <a href="{% url 'setup:grades' %}">Restrictions</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="">
+      <a href="javascript:void(0)" class="navItem">
+        <span class="flex items-center">
+      <iconify-icon class=" nav-icon" icon="heroicons-outline:document"></iconify-icon>
+      <span>Teachers</span>
+        </span>
+        <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+      </a>
+      <ul class="sidebar-submenu">
+        <li>
+          <a href="{% url 'setup:levels' %}">Teachers</a>
+        </li>
+        <li>
+          <a href="{% url 'setup:terms' %}">Create Teacher</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="">
+      <a href="javascript:void(0)" class="navItem">
+        <span class="flex items-center">
+      <iconify-icon class=" nav-icon" icon="heroicons-outline:document"></iconify-icon>
+      <span>Students</span>
+        </span>
+        <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+      </a>
+      <ul class="sidebar-submenu">
+        <li>
+          <a href="{% url 'setup:levels' %}">Students</a>
+        </li>
+        <li>
+          <a href="{% url 'setup:terms' %}">Create Student</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="">
+      <a href="javascript:void(0)" class="navItem">
+        <span class="flex items-center">
+      <iconify-icon class=" nav-icon" icon="heroicons-outline:document"></iconify-icon>
+      <span>Library</span>
+        </span>
+        <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+      </a>
+      <ul class="sidebar-submenu">
+        <li>
+          <a href="{% url 'setup:levels' %}">Items</a>
+        </li>
+        <li>
+          <a href="{% url 'setup:terms' %}">Create Item</a>
+        </li>
+        <li>
+          <a href="{% url 'setup:terms' %}">Item Copies</a>
+        </li>
+        <li>
+          <a href="{% url 'setup:terms' %}">Borrow Copy</a>
+        </li>
+        <li>
+          <a href="{% url 'setup:terms' %}">Borrowed Copies</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="">
+      <a href="javascript:void(0)" class="navItem">
+        <span class="flex items-center">
+      <iconify-icon class=" nav-icon" icon="heroicons-outline:document"></iconify-icon>
+      <span>Inventory</span>
+        </span>
+        <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+      </a>
+      <ul class="sidebar-submenu">
+        <li>
+          <a href="{% url 'setup:levels' %}">Items</a>
+        </li>
+        <li>
+          <a href="{% url 'setup:terms' %}">Create Item</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

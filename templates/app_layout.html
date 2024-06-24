@@ -1,0 +1,63 @@
+{% load static  %}
+
+<!DOCTYPE html>
+<html lang="zxx" dir="ltr" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Dashcode - HTML Template</title>
+  <link rel="icon" type="image/png" href=" {% static 'images/logo/favicon.svg' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/rt-plugins.css' %}">
+  <link href=" {% static 'unpkg.com/aos%402.3.0/dist/aos.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'unpkg.com/leaflet%401.9.3/dist/leaflet.css' %}" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  <script src="{% static 'js/store.js' %}"></script>
+</head>
+
+<body class=" font-inter dashcode-app" id="body_class">
+  <main class="app-wrapper">
+    <div class="sidebar-wrapper group w-0 hidden xl:w-[248px] xl:block">
+      <div id="bodyOverlay" class="w-screen h-screen fixed top-0 bg-slate-900 bg-opacity-50 backdrop-blur-sm z-10 hidden"></div>
+      <div class="logo-segment">
+        <a class="flex items-center" href="index.html">
+          <img src="{% static 'images/logo/logo-c.svg' %}" class="black_logo" alt="logo">
+          <img src="{% static 'images/logo/logo-c-white.svg' %}" class="white_logo" alt="logo">
+          <span class="ltr:ml-3 rtl:mr-3 text-xl font-Inter font-bold text-slate-900 dark:text-white">DashCode</span>
+        </a>
+        <!-- Sidebar Type Button -->
+        <div id="sidebar_type" class="cursor-pointer text-slate-900 dark:text-white text-lg">
+          <iconify-icon class="sidebarDotIcon extend-icon text-slate-900 dark:text-slate-200" icon="fa-regular:dot-circle"></iconify-icon>
+          <iconify-icon class="sidebarDotIcon collapsed-icon text-slate-900 dark:text-slate-200" icon="material-symbols:circle-outline"></iconify-icon>
+        </div>
+        <button class="sidebarCloseIcon text-2xl inline-block md:hidden">
+          <iconify-icon class="text-slate-900 dark:text-slate-200" icon="clarity:window-close-line"></iconify-icon>
+        </button>
+      </div>
+      {% include "includes/sidebar.html" %}
+      {% comment %} {% include "includes/settings.html" %} {% endcomment %}
+    </div>
+
+    <div class="flex flex-col justify-between min-h-screen">
+      <div>
+        {% include "includes/header.html" %}
+        <div class="content-wrapper transition-all duration-150 xl:ltr:ml-[248px] xl:rtl:mr-[248px]" id="content_wrapper">
+          <div class="page-content">
+            {% block content %}{% endblock %}
+          </div>
+        </div>
+      </div>
+
+      {% include "includes/footer.html" %}
+    </div>
+  </main>
+
+  <!-- scripts -->
+  <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+  <script src="{% static 'js/rt-plugins.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
